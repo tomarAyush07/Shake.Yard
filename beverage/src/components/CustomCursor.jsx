@@ -5,16 +5,13 @@ export default function CustomCursor() {
   const [big, setBig] = useState(false)
   const [visible, setVisible] = useState(false)
 
-  // Motion values for the dot
   const mouseX = useMotionValue(-100)
   const mouseY = useMotionValue(-100)
 
-  // Physics settings for a slightly heavier, fluid feel
   const springConfigDot = { damping: 25, stiffness: 300, mass: 0.5 }
   const dotX = useSpring(mouseX, springConfigDot)
   const dotY = useSpring(mouseY, springConfigDot)
 
-  // Spring settings for the trailing ring. Lower stiffness, higher damping = more lag
   const springConfigRing = { damping: 30, stiffness: 100, mass: 1.5 }
   const ringX = useSpring(mouseX, springConfigRing)
   const ringY = useSpring(mouseY, springConfigRing)
