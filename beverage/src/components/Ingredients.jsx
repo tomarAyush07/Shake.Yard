@@ -18,7 +18,6 @@ const INGREDIENTS = [
 export default function Ingredients() {
   return (
     <section style={{ padding: '100px 40px 80px', position: 'relative' }} id="fresh">
-      {/* shimmer divider */}
       <motion.div 
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
@@ -27,8 +26,6 @@ export default function Ingredients() {
         className="section-divider" 
         style={{ marginBottom: '60px', transformOrigin: 'left' }} 
       />
-
-      {/* big watermark */}
       <motion.div 
         animate={{ 
           scale: [1, 1.02, 1],
@@ -106,7 +103,6 @@ export default function Ingredients() {
                 }
               }}
             >
-              {/* color wash on hover */}
               <motion.div 
                 variants={{
                   hover: { opacity: 1 }
@@ -169,8 +165,6 @@ export default function Ingredients() {
               </div>
             </motion.div>
           ))}
-
-          {/* Last cell */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

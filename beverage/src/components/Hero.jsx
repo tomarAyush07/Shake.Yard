@@ -27,20 +27,14 @@ const STATS = [
 export default function Hero() {
   const [heroIdx, setHeroIdx] = useState(0)
 
-  // 3D Tilt Setup
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
-
-  // Setting the physics of the spring. Since user asked for "rich and elegant", 
-  // we'll make it slightly fluid rather than aggressively snappy.
   const springConfig = { damping: 20, stiffness: 100, mass: 1 }
   const springX = useSpring(mouseX, springConfig)
   const springY = useSpring(mouseY, springConfig)
 
   const rotateX = useTransform(springY, [-0.5, 0.5], [15, -15])
   const rotateY = useTransform(springX, [-0.5, 0.5], [-15, 15])
-  
-  // Parallax Setup
   const parallaxX = useTransform(springX, [-0.5, 0.5], [-30, 30])
   const parallaxY = useTransform(springY, [-0.5, 0.5], [-30, 30])
 
@@ -82,7 +76,6 @@ export default function Hero() {
         perspective: 1200
       }}
     >
-      {/* Background blobs — parallax */}
       <motion.div
         className="hero-blob"
         style={{ x: parallaxX, y: parallaxY }}
@@ -91,10 +84,7 @@ export default function Hero() {
         className="hero-blob2"
         style={{ x: useTransform(parallaxX, v => -v * 0.5), y: useTransform(parallaxY, v => -v * 0.5) }}
       />
-
-      {/* LEFT SIDE */}
       <div style={{ position: 'relative', zIndex: 2 }}>
-        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -114,8 +104,6 @@ export default function Hero() {
             Now serving • All day every day
           </span>
         </motion.div>
-
-        {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -130,8 +118,6 @@ export default function Hero() {
           <span style={{ display: 'block' }}>MILK</span>
           <span style={{ color: 'var(--electric-yellow)', display: 'block' }}>SHAKE</span>
         </motion.h1>
-
-        {/* Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -144,8 +130,6 @@ export default function Hero() {
           Brings all the boys to the yard. Crafted from real fruit.
           Dangerously good. No notes.
         </motion.p>
-
-        {/* Flavor pills */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -163,8 +147,6 @@ export default function Hero() {
             </button>
           ))}
         </motion.div>
-
-        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -174,8 +156,6 @@ export default function Hero() {
           <Link to="/menu" className="btn-primary">Get the drip ↓</Link>
           <Link to="/about" className="btn-secondary">What's inside?</Link>
         </motion.div>
-
-        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -202,8 +182,6 @@ export default function Hero() {
           ))}
         </motion.div>
       </div>
-
-      {/* RIGHT SIDE — 3D tilt ring */}
       <motion.div
         className="hero-image-col"
         style={{
@@ -212,7 +190,6 @@ export default function Hero() {
           perspective: 1000
         }}
       >
-        {/* Outer glow */}
         <motion.div style={{
           position: 'absolute', width: '500px', height: '500px', borderRadius: '50%',
           background: `radial-gradient(circle, rgba(255,60,120,0.4), transparent 68%)`,
