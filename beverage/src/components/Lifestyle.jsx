@@ -3,16 +3,11 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import lifestyle from '../assets/black.png'
 
 export default function Lifestyle() {
-  // Magnet/Tilt Physics Engine
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
-
-  // Smooth, heavy spring config for premium fluid tilt
   const springConfig = { damping: 25, stiffness: 200, mass: 1.5 }
   const smoothX = useSpring(mouseX, springConfig)
   const smoothY = useSpring(mouseY, springConfig)
-
-  // Map mouse coordinates (-1 to 1) to rotation degrees (-10deg to 10deg)
   const rotateX = useTransform(smoothY, [-1, 1], [10, -10])
   const rotateY = useTransform(smoothX, [-1, 1], [-10, 10])
 
@@ -29,8 +24,6 @@ export default function Lifestyle() {
     mouseX.set(0)
     mouseY.set(0)
   }
-
-  // Variants for staggered list item reveals
   const listContainer = {
     hidden: { opacity: 0 },
     show: {
@@ -49,7 +42,6 @@ export default function Lifestyle() {
 
   return (
     <section style={{ padding: '100px 40px', position: 'relative' }}>
-      {/* shimmer divider */}
       <motion.div 
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
