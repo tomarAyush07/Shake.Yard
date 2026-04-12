@@ -58,8 +58,6 @@ export default function Lifestyle() {
           gap: '80px',
           alignItems: 'center'
         }}>
-
-          {/* 3D Hardware Accelerated Image Container */}
           <motion.div 
             style={{ position: 'relative', perspective: 1200 }}
             initial={{ opacity: 0, scale: 0.9, rotateY: 15 }}
@@ -94,8 +92,6 @@ export default function Lifestyle() {
                 }}
               />
             </motion.div>
-
-            {/* Floating Tag */}
             <motion.div 
               animate={{ 
                 y: [0, -8, 0],
@@ -112,8 +108,6 @@ export default function Lifestyle() {
               Post-Workout ✓
             </motion.div>
           </motion.div>
-
-          {/* Content */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
