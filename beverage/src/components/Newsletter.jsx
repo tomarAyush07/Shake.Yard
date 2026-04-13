@@ -31,14 +31,11 @@ export default function Newsletter() {
           boxShadow: '0 30px 60px rgba(255,45,120,0.2)'
         }}
       >
-        {/* Hardware-accelerated background pattern */}
         <div style={{
           position: 'absolute', inset: 0, pointerEvents: 'none', opacity: 0.08,
           backgroundImage: 'repeating-linear-gradient(45deg, rgba(0,0,0,0.3) 0, rgba(0,0,0,0.3) 1px, transparent 0, transparent 50%)',
           backgroundSize: '12px 12px',
         }} />
-
-        {/* Dynamic Framer Motion glow orb replacing CSS keyframes */}
         <motion.div 
           animate={{ 
             scale: [1, 1.2, 1],
@@ -60,7 +57,6 @@ export default function Newsletter() {
           position: 'relative',
           zIndex: 10
         }}>
-          {/* Left Column */}
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
@@ -123,8 +119,6 @@ export default function Newsletter() {
               </div>
             </motion.div>
           </div>
-
-          {/* Right Column */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', justifyContent: 'center' }}>
             {[
               ['🎁', '10% off your first order — instantly'],

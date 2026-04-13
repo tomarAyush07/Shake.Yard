@@ -1,52 +1,3 @@
-// import { Link } from 'react-router-dom'
-// import { useCart } from '../context/CartContext'
-// import ShakeYardLogo from './Shakeyardlogo.jsx'
-
-// export default function Navbar() {
-//   const { totalItems } = useCart()
-
-//   return (
-//     <nav style={{
-//       height: '70px',
-//       padding: '0 40px',
-//       display: 'flex',
-//       alignItems: 'center',
-//       justifyContent: 'space-between',
-//       position: 'relative',
-//       zIndex: 10,
-//     }}>
-//       <Link to="/" style={{ textDecoration: 'none' }}>
-//         <ShakeYardLogo size="md" />
-//       </Link>
-
-//       {/* navbar-links + nav-hide classes let home.css hide text links on mobile */}
-//       <ul className="navbar-links">
-//         <li className="nav-hide"><Link to="/menu" style={navLinkStyle}>Menu</Link></li>
-//         <li className="nav-hide"><Link to="/about" style={navLinkStyle}>About</Link></li>
-//         <li>
-//           <Link to="/menu" style={{
-//             ...navLinkStyle,
-//             background: 'var(--hot-pink)',
-//             color: 'white',
-//             padding: '8px 20px',
-//             borderRadius: '100px',
-//             fontSize: '1.1rem',
-//           }}>
-//             Bag {totalItems > 0 && `(${totalItems})`} 🛍
-//           </Link>
-//         </li>
-//       </ul>
-//     </nav>
-//   )
-// }
-
-// const navLinkStyle = {
-//   fontFamily: '"Bebas Neue", sans-serif',
-//   fontSize: '1.2rem',
-//   letterSpacing: '0.15em',
-//   color: 'var(--cream)',
-//   textDecoration: 'none',
-// }
 import { Link, useLocation } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { useEffect, useRef, useState } from 'react'
@@ -58,8 +9,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [bagBounce, setBagBounce] = useState(false)
   const prevItems = useRef(totalItems)
-
-  // bounce bag when item added
   useEffect(() => {
     if (totalItems > prevItems.current) {
       setBagBounce(true)
@@ -125,7 +74,6 @@ export default function Navbar() {
               >
                 {label}
               </Link>
-              {/* animated underline */}
               <span style={{
                 position: 'absolute', bottom: '-2px', left: 0,
                 height: '1.5px', background: 'var(--electric-yellow)',
