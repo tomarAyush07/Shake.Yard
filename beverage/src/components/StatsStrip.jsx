@@ -11,22 +11,16 @@ const STATS = [
 function StatItem({ stat, index }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-
-  // Use a slow, premium spring for the counting effect
   const springValue = useSpring(0, {
     damping: 40,
     stiffness: 40,
     mass: 1.5,
   })
-
-  // Start spring when in view
   useEffect(() => {
     if (isInView && stat.target !== null) {
       springValue.set(stat.target)
     }
   }, [isInView, stat.target, springValue])
-
-  // Transform spring value seamlessly to a rounded integer
   const displayValue = useTransform(springValue, (latest) => 
     Math.round(latest)
   )
@@ -82,8 +76,6 @@ function StatItem({ stat, index }) {
       >
         {stat.label}
       </motion.div>
-
-      {/* Premium glowing underline effect on hover */}
       <motion.div
         variants={{
           hover: { width: '100%', left: '0%' }
@@ -101,7 +93,6 @@ function StatItem({ stat, index }) {
     </motion.div>
   )
 }
-
 export default function StatsStrip() {
   return (
     <div
