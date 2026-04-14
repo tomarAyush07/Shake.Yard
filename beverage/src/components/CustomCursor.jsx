@@ -48,9 +48,7 @@ export default function CustomCursor() {
       document.removeEventListener('mouseout', handleMouseOut)
     }
   }, [])
-
   if (!visible) return null
-
   return (
     <>
       <motion.div
