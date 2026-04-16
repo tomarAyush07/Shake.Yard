@@ -1,26 +1,3 @@
-// import CustomCursor from '../components/CustomCursor'
-// export default function About() {
-//   return (
-//     <>
-//      <CustomCursor />
-//     <div style={{ padding: '60px 40px', maxWidth: '800px', margin: '0 auto' }}>
-//       <h1 style={{ fontFamily: '"Bebas Neue",sans-serif', fontSize: 'clamp(4rem,8vw,8rem)', lineHeight: 0.9, color: 'var(--cream)', marginBottom: '40px' }}>
-//         ABOUT <span style={{ color: 'var(--hot-pink)' }}>US</span>
-//       </h1>
-//       {[
-//         ['The Yard 🏡', 'SHAKE.YARD started with one obsession: make a milkshake so good it brings everyone to the yard. We use 100% real fruit, no artificial stuff, and zero apologies.'],
-//         ['Why we exist 🥤', 'Because protein shakes taste like chalk and smoothies are boring. We blended the best of both worlds — real fruit, high protein, maximum flavor.'],
-//         ['Our promise 🌿', 'No artificial flavors. No weird preservatives. No cap. Just real ingredients that actually taste good.'],
-//       ].map(([title, body]) => (
-//         <div key={title} style={{ marginBottom: '48px' }}>
-//           <h2 style={{ fontFamily: '"Permanent Marker",cursive', fontSize: '1.6rem', color: 'var(--electric-yellow)', marginBottom: '12px' }}>{title}</h2>
-//           <p style={{ fontSize: '0.85rem', color: 'rgba(255,248,240,0.55)', lineHeight: 1.9 }}>{body}</p>
-//         </div>
-//       ))}
-//     </div>
-//     </>
-//   )
-// }
 import { Link } from 'react-router-dom'
 
 const TEAM = [
@@ -41,7 +18,6 @@ export default function About() {
     <>
       <div className="page-content" style={{ padding: '60px 40px', maxWidth: '900px', margin: '0 auto' }}>
 
-        {/* Hero */}
         <h1 style={{
           fontFamily: '"Bebas Neue",sans-serif', fontSize: 'clamp(4rem,8vw,8rem)',
           lineHeight: 0.9, color: 'var(--cream)', marginBottom: '24px',
@@ -53,7 +29,6 @@ export default function About() {
           We use 100% real fruit, zero artificial anything, and absolutely zero apologies.
         </p>
 
-        {/* Story sections */}
         {[
           ['The Yard 🏡', 'SHAKE.YARD started in a tiny kitchen with one blender, five fruits, and a stubborn belief that protein shakes don not have to taste like chalk. We blended the best of both worlds — real fruit, high protein, maximum flavor. Now we are bringing the yard to everyone.'],
           ['Why we exist 🥤', 'Because most "healthy" shakes taste like disappointment in a cup. We built something that actually tastes good — no fake sweeteners, no mystery powders, no compromises. Just fruit, protein, and vibes.'],
@@ -65,7 +40,6 @@ export default function About() {
           </div>
         ))}
 
-        {/* Values grid */}
         <h2 style={{ fontFamily: '"Bebas Neue",sans-serif', fontSize: 'clamp(2.5rem,5vw,4rem)', color: 'var(--cream)', marginBottom: '32px' }}>
           WHAT WE <span style={{ color: 'var(--hot-pink)' }}>STAND FOR</span>
         </h2>
@@ -82,7 +56,6 @@ export default function About() {
           ))}
         </div>
 
-        {/* Team */}
         <h2 style={{ fontFamily: '"Bebas Neue",sans-serif', fontSize: 'clamp(2.5rem,5vw,4rem)', color: 'var(--cream)', marginBottom: '32px' }}>
           THE <span style={{ color: 'var(--electric-yellow)' }}>TEAM</span>
         </h2>
@@ -107,7 +80,6 @@ export default function About() {
           ))}
         </div>
 
-        {/* CTA */}
         <div style={{
           background: 'linear-gradient(135deg, rgba(255,45,120,0.12), rgba(0,212,255,0.06))',
           border: '1px solid rgba(255,45,120,0.2)', borderRadius: '24px', padding: '40px',
