@@ -9,7 +9,6 @@
   --cream: #fff8f0;
   --purple: #7c3aed;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: var(--dark); font-family: "Space Mono", monospace; overflow-x: hidden; }
 @media (hover: hover) and (pointer: fine) {
