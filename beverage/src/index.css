@@ -43,19 +43,14 @@ body { background: var(--dark); font-family: "Space Mono", monospace; overflow-x
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: var(--dark); font-family: "Space Mono", monospace; overflow-x: hidden; }
-
-/* Force disable native cursor on key elements without breaking hit testing */
 @media (hover: hover) and (pointer: fine) {
   body, a, button, input, select, textarea, [role="button"], li, nav { cursor: none !important; }
 }
-
-/* Hide custom cursor on touch devices */
 @media (hover: none) and (pointer: coarse) {
   body { cursor: auto; }
   .custom-cursor { display: none !important; }
 }
 
-/* Lenis Scrolling Setup */
 html.lenis, html.lenis body {
   height: auto;
 }

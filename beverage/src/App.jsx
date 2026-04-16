@@ -25,7 +25,7 @@ export default function App() {
     })
 
     function raf(time) {
-      if (introDone) lenis.raf(time) // Only parse scrolling if main app is mounted
+      if (introDone) lenis.raf(time) 
       requestAnimationFrame(raf)
     }
 
