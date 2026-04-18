@@ -18,7 +18,6 @@ body { background: var(--dark); font-family: "Space Mono", monospace; overflow-x
   body { cursor: auto; }
   .custom-cursor { display: none !important; }
 }
-
 html.lenis, html.lenis body {
   height: auto;
 }

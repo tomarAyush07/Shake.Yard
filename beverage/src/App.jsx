@@ -23,19 +23,15 @@ export default function App() {
       smoothWheel: true,
       smoothTouch: false,
     })
-
     function raf(time) {
       if (introDone) lenis.raf(time) 
       requestAnimationFrame(raf)
     }
-
     requestAnimationFrame(raf)
-
     return () => {
       lenis.destroy()
     }
   }, [introDone])
-
   return (
     <CartProvider>
       <AnimatePresence mode="wait">
