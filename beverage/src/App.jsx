@@ -15,7 +15,6 @@ import IntroLoader from './components/IntroLoader'
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false)
-
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.08,
