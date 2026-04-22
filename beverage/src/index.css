@@ -9,6 +9,7 @@
   --cream: #fff8f0;
   --purple: #7c3aed;
 }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: var(--dark); font-family: "Space Mono", monospace; overflow-x: hidden; }
 @media (hover: hover) and (pointer: fine) {
@@ -18,18 +19,23 @@ body { background: var(--dark); font-family: "Space Mono", monospace; overflow-x
   body { cursor: auto; }
   .custom-cursor { display: none !important; }
 }
+
 html.lenis, html.lenis body {
   height: auto;
 }
+
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
+
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
