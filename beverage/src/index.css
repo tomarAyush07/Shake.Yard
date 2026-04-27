@@ -14,20 +14,16 @@ body { background: var(--dark); font-family: "Space Mono", monospace; overflow-x
 @media (hover: hover) and (pointer: fine) {
   body, a, button, input, select, textarea, [role="button"], li, nav { cursor: none !important; }
 }
-
 @media (hover: none) and (pointer: coarse) {
   body { cursor: auto; }
   .custom-cursor { display: none !important; }
 }
-
 html.lenis, html.lenis body {
   height: auto;
 }
-
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
-
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
