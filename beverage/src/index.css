@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap');
+
+
 :root {
   --hot-pink: #ff2d78;
   --electric-yellow: #ffe600;
@@ -8,7 +10,6 @@
   --cream: #fff8f0;
   --purple: #7c3aed;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: var(--dark); font-family: "Space Mono", monospace; overflow-x: hidden; }
 @media (hover: hover) and (pointer: fine) {
@@ -30,6 +31,7 @@ html.lenis, html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
