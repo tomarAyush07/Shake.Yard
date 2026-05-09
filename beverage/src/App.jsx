@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
 import Lenis from 'lenis'
 import { AnimatePresence, motion } from 'framer-motion'
-
 import Ticker from './components/Ticker'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -12,6 +11,7 @@ import Menu from './pages/Menu'
 import About from './pages/About'
 import CustomCursor from './components/CustomCursor'
 import IntroLoader from './components/IntroLoader'
+
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false)
@@ -58,4 +58,5 @@ export default function App() {
       <CustomCursor />
     </CartProvider>
   )
+
 }
