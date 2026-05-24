@@ -12,6 +12,7 @@ import About from './pages/About'
 import CustomCursor from './components/CustomCursor'
 import IntroLoader from './components/IntroLoader'
 
+
 export default function App() {
   const [introDone, setIntroDone] = useState(false)
   useEffect(() => {
@@ -57,4 +58,5 @@ export default function App() {
       <CustomCursor />
     </CartProvider>
   )
+  
 }
