@@ -58,5 +58,4 @@ export default function App() {
       <CustomCursor />
     </CartProvider>
   )
-  
 }
