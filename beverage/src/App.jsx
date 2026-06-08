@@ -57,7 +57,5 @@ export default function App() {
       </AnimatePresence>
       <CustomCursor />
     </CartProvider>
-
-    
   )
 }
